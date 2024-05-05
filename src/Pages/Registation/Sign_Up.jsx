@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import avater from "./../../assets/undraw_male_avatar_g98d (1).svg";
 import { IoIosEye } from "react-icons/io";
@@ -5,12 +6,15 @@ import { IoIosEyeOff } from "react-icons/io";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 
-const Login = () => {
-  const [showPassword, setShowPassword] = useState(false);
+
+
+const SignUp = () => {
+    const [showPassword, setShowPassword] = useState(false);
+    const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const {register, handleSubmit, formState: {errors}} = useForm();
   const onSubmit = (data)=>{
-      const {email, password}=data;
-      console.log(email, password)
+      const {email, password, confirm_password}=data;
+      console.log(email, password, confirm_password)
   }
   return (
     <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-50 text-gray-800">
@@ -18,17 +22,15 @@ const Login = () => {
         <img src={avater} alt="" className="w-20 md:w-24" />
       </div>
       <h1 className="text-2xl md:text-3xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-green-700 to-green-400">
-        Sign In
+        Sign Up
       </h1>
       <p className="text-base text-center text-gray-600">
-        Sign in to access your account
+        Sign up to access your account
       </p>
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
         <div className="space-y-1 text-sm">
-          <label className="block text-base text-gray-600">
-            Your Email
-          </label>
+          <label className="block text-base text-gray-600">Your Email</label>
           <input
             type="email"
             name="email"
@@ -38,29 +40,54 @@ const Login = () => {
             {...register("email", { required: true })}
             required
           />
-          {errors.email && <span className="text-red-500 mt-1">This fill is required </span> }
+          {errors.email && (
+            <span className="text-red-500 mt-1">This fill is required </span>
+          )}
         </div>
         <div className="space-y-1 text-sm">
-          <label className="block text-base text-gray-600">
-            Password
-          </label>
+          <label className="block text-base text-gray-600">Password</label>
           <div className="flex justify-center items-center px-4 py-3 rounded-md border border-green-500">
             <input
-              type={showPassword ? "true" : "password"}
+              type={showPassword ? "text" : "password"}
               name="password"
               id="password"
               placeholder="Password"
               className="w-full outline-none text-gray-800 "
-              {...register("password", {required: true})}
+              {...register("password", { required: true })}
               required
             />
-            {errors.password && <span className="text-red-500 mt-1">This fill is required</span> }
-            <span className="text-xl cursor-pointer" onClick={()=>setShowPassword((preve)=>!preve)}>{showPassword ? <IoIosEyeOff /> : <IoIosEye />}</span>
+            {errors.password && (
+              <span className="text-red-500 mt-1">This fill is required</span>
+            )}
+            <span
+              className="text-xl cursor-pointer"
+              onClick={() => setShowPassword((preve) => !preve)}
+            >
+              {showPassword ? <IoIosEyeOff /> : <IoIosEye />}
+            </span>
           </div>
-          <div className="flex justify-end text-sm hover:underline text-gray-600">
-            <a rel="noopener noreferrer" href="#">
-              Forgot Password?
-            </a>
+        </div>
+        <div className="space-y-1 text-sm">
+          <label className="block text-base text-gray-600">Confirm Password</label>
+          <div className="flex justify-center items-center px-4 py-3 rounded-md border border-green-500">
+            <input
+              type={showConfirmPassword ? "text" : "password"}
+              name="confirm_password"
+              id="confirm_password"
+              placeholder="Comfirm Password"
+              className="w-full outline-none text-gray-800 "
+              {...register("confirm_password", { required: true })}
+              required
+            />
+            {errors.password && (
+              <span className="text-red-500 mt-1">This fill is required</span>
+            )}
+            <span
+              className="text-xl cursor-pointer"
+              onClick={() => setShowConfirmPassword((preve) => !preve)}
+            >
+              {showConfirmPassword ? <IoIosEyeOff /> : <IoIosEye />}
+            </span>
           </div>
         </div>
         <button className="cursor-pointer w-full h-12 bg-green-600 text-white rounded-lg hover:bg-green-700 hover:shadow-lg transition-all group active:w-11 active:h-11 active:rounded-full active:duration-300 hover:scale-105 ease-in-out">
@@ -81,7 +108,7 @@ const Login = () => {
               fill="white"
             ></path>
           </svg>
-          <span className="group-active:hidden text-xl font-bold">Sign In</span>
+          <span className="group-active:hidden text-xl font-bold">Sign Up</span>
         </button>
       </form>
       <div className="flex items-center pt-4 space-x-1">
@@ -129,12 +156,15 @@ const Login = () => {
       </div>
       <p className="text-sm md:text-base text-center gap-2 text-gray-600">
         Don`t have an account?
-        <Link to="/signup" className="hover:underline pl-2 cursor-pointer text-green-500">
-          Sign up
+        <Link
+          to="/login"
+          className="hover:underline pl-2 cursor-pointer text-green-500"
+        >
+          Sign In
         </Link>
       </p>
     </div>
   );
 };
 
-export default Login;
+export default SignUp;
