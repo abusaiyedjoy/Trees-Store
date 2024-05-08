@@ -1,25 +1,46 @@
-
 import { useState } from "react";
 import avater from "./../../assets/undraw_male_avatar_g98d (1).svg";
 import { IoIosEye } from "react-icons/io";
 import { IoIosEyeOff } from "react-icons/io";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
-
-
+import ProfilePic from "./ProfilePic";
 
 const SignUp = () => {
-    const [showPassword, setShowPassword] = useState(false);
-    const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const {register, handleSubmit, formState: {errors}} = useForm();
-  const onSubmit = (data)=>{
-      const {email, password, confirm_password}=data;
-      console.log(email, password, confirm_password)
-  }
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [profileImage, setProfileImage] = useState("");
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => {
+    const { email, password, confirm_password } = data;
+    console.log(email, password, confirm_password);
+  };
+
+  const handleFileSubmit = async(e) => {
+    const file = e.target.files[0];
+
+    const ProfileImage = await ProfilePic(file)
+    setProfileImage(ProfileImage);
+  };
+
   return (
     <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-50 text-gray-800">
-      <div className="flex justify-center items-center">
-        <img src={avater} alt="" className="w-20 md:w-24" />
+      <div className="flex flex-col justify-center items-center relative">
+        <div className="">
+          {profileImage ? (<img src={profileImage} alt="" className="w-20 md:w-24 h-20 md:h-24 rounded-full bg-center" />) : (<img src={avater} alt="" className="w-20 md:w-24" />)}
+        </div>
+        <form action="">
+          <label>
+            <div className="px-4 bg-slate-100 py-1 my-2 w-auto text-center rounded-lg font-medium hover:underline hover:text-green-500 hover:shadow-md cursor-pointer border-2 overflow-hidden">
+              Upload
+            </div>
+            <input type="file" className="hidden" onChange={handleFileSubmit} />
+          </label>
+        </form>
       </div>
       <h1 className="text-2xl md:text-3xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-green-700 to-green-400">
         Sign Up
@@ -68,7 +89,9 @@ const SignUp = () => {
           </div>
         </div>
         <div className="space-y-1 text-sm">
-          <label className="block text-base text-gray-600">Confirm Password</label>
+          <label className="block text-base text-gray-600">
+            Confirm Password
+          </label>
           <div className="flex justify-center items-center px-4 py-3 rounded-md border border-green-500">
             <input
               type={showConfirmPassword ? "text" : "password"}
@@ -155,7 +178,7 @@ const SignUp = () => {
         </button>
       </div>
       <p className="text-sm md:text-base text-center gap-2 text-gray-600">
-        Don`t have an account?
+        Already have an account?
         <Link
           to="/login"
           className="hover:underline pl-2 cursor-pointer text-green-500"
