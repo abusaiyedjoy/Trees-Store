@@ -9,9 +9,11 @@ const Footer = () => {
         <div className="lg:flex">
           <div className="w-full -mx-6 lg:w-2/5">
             <div className="px-6">
+              <div className="flex">
               <a href="/">
                 <img className="w-48 h-20 pb-0 mt-0" src={Logo} alt=""/>
               </a>
+              </div>
 
               <p className="max-w-sm text-gray-500 ">
                 Join 31,000+ other and never miss out on new tips, tutorials,
@@ -156,10 +158,10 @@ const Footer = () => {
           </div>
         </div>
 
-        <hr className="h-px my-6 bg-gray-200 border-none bg-gray-700"/>
+        <hr className="h-px my-6 border-none bg-gray-700"/>
 
         <div>
-          <p className="text-center text-gray-500 ">
+          <p className="text-center text-gray-700 ">
             © Brand 2020 - All rights reserved
           </p>
         </div>
