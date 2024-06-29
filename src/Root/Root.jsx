@@ -7,7 +7,7 @@ const Root = () => {
     <div>
       <Navbar></Navbar>
       <div
-        className="my-12 flex justify-center items-center min-h-[calc(100vh-360px)]">
+        className=" flex justify-center items-center min-h-[calc(100vh-360px)]">
         <Outlet></Outlet>
       </div>
 
