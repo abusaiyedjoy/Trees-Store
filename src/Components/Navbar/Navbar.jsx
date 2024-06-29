@@ -1,14 +1,15 @@
 import { IoSearch } from "react-icons/io5";
-import Logo from "./../../assets/logo.png";
+import Logo from "./../../assets/OliveTree dental logo (2).png";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className=" h-16 shadow-md bg-white">
+    <div className=" h-16 shadow-md bg-gray-100">
       <div className="flex justify-between items-center h-full px-4">
-        <div className="">
-          <Link to="/">
-          <img src={Logo} alt="" className="w-36 lg:w-40 pb-3 h-14 " />
+        <div className="w-[400px]">
+          <Link to="/" className="flex justify-center items-center gap-0 w-full">
+          <img src={Logo} alt="" className="w-32 object-contain lg:w-16 py-3 h-16 " />
+          <h2 className="text-2xl text-[#008037] font-medium">Trees Store</h2>
           </Link>
         </div>
         <div className="hidden lg:flex justify-center items-center gap-0 w-full h-8">
@@ -17,7 +18,7 @@ const Navbar = () => {
             type="text"
             placeholder="Please search here..."
           />
-          <div className="bg-green-500 text-white w-12 flex justify-center items-center text-xl font-bold h-full focus-within:shadow rounded-r-full">
+          <div className="bg-[#008037] text-white w-12 flex justify-center items-center text-xl font-bold h-full focus-within:shadow rounded-r-full">
             <IoSearch />
           </div>
         </div>
@@ -43,7 +44,7 @@ const Navbar = () => {
                     d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                   />
                 </svg>
-                <span className="badge badge-sm indicator-item bg-green-500 text-white w-5 h-5 text-md">8</span>
+                <span className="badge badge-sm indicator-item bg-[#008037] text-white w-5 h-5 text-md">8</span>
               </div>
             </div>
             <div
@@ -92,7 +93,7 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <div className="bg-green-500 hover:bg-green-600 hover:shadow-md px-6 py-2 flex justify-center items-center rounded-full text-lg font-bold text-white">
+          <div className="bg-[#008037] hover:bg-[#237848] hover:shadow-md px-6 py-2 flex justify-center items-center rounded-full text-lg font-bold text-white">
             <Link to="login" className="text-center">Login</Link>
           </div>
         </div>

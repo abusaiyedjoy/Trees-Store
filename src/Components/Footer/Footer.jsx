@@ -1,17 +1,17 @@
-import Logo from "./../../assets/logo.png";
+import Logo from "./../../assets/OliveTree dental logo.png";
 
 
 
 const Footer = () => {
   return (
-    <footer className="bg-white">
+    <footer className="bg-gray-100">
       <div className="container p-6 mx-auto">
         <div className="lg:flex">
           <div className="w-full -mx-6 lg:w-2/5">
             <div className="px-6">
               <div className="flex">
               <a href="/">
-                <img className="w-48 h-20 pb-0 mt-0" src={Logo} alt=""/>
+                <img className="w-48 h-30 pb-2 object-contain mt-0" src={Logo} alt=""/>
               </a>
               </div>
 
