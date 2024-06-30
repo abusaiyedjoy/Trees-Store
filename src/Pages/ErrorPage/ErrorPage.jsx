@@ -1,11 +1,20 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const ErrorPage = () => {
+  const navigate = useNavigate()
+
+  const handleGoHome = () =>{
+    navigate("/")
+  }
+
+  const handleGoBack = () =>{
+    navigate(-1)
+  }
   return (
       <section className="flex items-center min-h-screen p-16 dark:bg-gray-50 dark:text-gray-800">
         <div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">
           <div className="max-w-md text-center">
-            <h2 className="mb-8 font-extrabold text-9xl  text-[#d1b371]">
+            <h2 className="mb-8 font-extrabold text-9xl  text-[#008037]">
               <span className="sr-only">Error</span>404
             </h2>
             <p className="text-2xl font-semibold md:text-3xl">
@@ -18,12 +27,12 @@ const ErrorPage = () => {
             <div className="flex gap-5 justify-center items-center">
             <Link to="/"
               rel="noopener noreferrer"
-              href="#"
-              className="bg-[#d1b371] hover:bg-[#c8a65a] hover:shadow-md px-6 py-2 flex justify-center items-center rounded-full text-xl font-bold text-white"
+              onClick={handleGoHome}
+              className="bg-[#008037] hover:bg-[#045125] hover:shadow-md px-6 py-2 flex justify-center items-center rounded-full text-xl font-bold text-white"
             >
               Back to homepage
             </Link>
-            <Link to="/" className="bg-[#d1b371] hover:bg-[#c8a65a] hover:shadow-md px-6 py-2 flex justify-center items-center rounded-full text-xl font-bold text-white">
+            <Link to="/" onClick={handleGoBack} className="bg-[#008037] hover:bg-[#045125] hover:shadow-md px-6 py-2 flex justify-center items-center rounded-full text-xl font-bold text-white">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

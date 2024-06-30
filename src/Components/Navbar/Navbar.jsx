@@ -1,100 +1,151 @@
-import { IoSearch } from "react-icons/io5";
 import Logo from "./../../assets/OliveTree dental logo (2).png";
-import { Link } from "react-router-dom";
-
+import { Link, NavLink } from "react-router-dom";
+import './Navbar.css'
+import { FaRegHeart } from "react-icons/fa";
+import { MdOutlineShoppingCart } from "react-icons/md";
 const Navbar = () => {
+  const NavLinks =
+    <>
+      <li><NavLink exact to="/" className="nav-link">Home</NavLink></li>
+      <li>
+        <details>
+          <summary className="nav-links">Parent</summary>
+          <ul className="p-2">
+            <li><NavLink to="/submenu1" className="nav-link">Submenu 1</NavLink></li>
+            <li><NavLink to="/submenu2" className="nav-link">Submenu 2</NavLink></li>
+          </ul>
+        </details>
+      </li>
+      <li><NavLink to="/blog" className="nav-link">Blog</NavLink></li>
+      <li><NavLink to="/about" className="nav-link">About US</NavLink></li>
+      <li><NavLink to="/contact" className="nav-link">Contact US</NavLink></li>
+    </>
+
   return (
-    <div className=" h-16 shadow-md bg-gray-100">
-      <div className="flex justify-between items-center h-full px-4">
-        <div className="w-[400px]">
-          <Link to="/" className="flex justify-center items-center gap-0 w-full">
-          <img src={Logo} alt="" className="w-32 object-contain lg:w-16 py-3 h-16 " />
-          <h2 className="text-2xl text-[#008037] font-medium">Trees Store</h2>
-          </Link>
-        </div>
-        <div className="hidden lg:flex justify-center items-center gap-0 w-full h-8">
-          <input
-            className="h-full w-80 outline-none border rounded-l-full pl-3 focus-within:shadow"
-            type="text"
-            placeholder="Please search here..."
-          />
-          <div className="bg-[#008037] text-white w-12 flex justify-center items-center text-xl font-bold h-full focus-within:shadow rounded-r-full">
-            <IoSearch />
-          </div>
-        </div>
-        <div className="flex justify-center items-center gap-2">
-          <div className="dropdown dropdown-end">
-            <div
-              tabIndex={0}
-              role="button"
-              className="btn btn-ghost btn-circle"
-            >
-              <div className="indicator">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                  />
-                </svg>
-                <span className="badge badge-sm indicator-item bg-[#008037] text-white w-5 h-5 text-md">8</span>
-              </div>
-            </div>
-            <div
-              tabIndex={0}
-              className="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow"
-            >
-              <div className="card-body">
-                <span className="font-bold text-lg">8 Items</span>
-                <span className="text-info">Subtotal: $999</span>
-                <div className="card-actions">
-                  <button className="btn btn-primary btn-block">
-                    View cart
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="dropdown dropdown-end">
-            <div
-              tabIndex={0}
-              role="button"
-              className="btn btn-ghost btn-circle avatar"
-            >
-              <div className="w-10 rounded-full">
-                <img
-                  alt="Tailwind CSS Navbar component"
-                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-                />
-              </div>
+    <div className=" shadow-xl fixed w-full bg-gray-100">
+      <div className="navbar">
+        <div className="navbar-start">
+          <div className="dropdown">
+            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-            >
-              <li>
-                <a className="justify-between">
-                  Profile
-                  <span className="badge">New</span>
-                </a>
-              </li>
-              <li>
-                <a>Settings</a>
-              </li>
-              <li>
-                <a>Logout</a>
-              </li>
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+              {NavLinks}
             </ul>
           </div>
-          <div className="bg-[#008037] hover:bg-[#237848] hover:shadow-md px-6 py-2 flex justify-center items-center rounded-full text-lg font-bold text-white">
-            <Link to="login" className="text-center">Login</Link>
+          <div className="w-[400px]">
+            <Link to="/" className="flex justify-start items-center gap-0 w-full">
+              <img src={Logo} alt="" className="w-32 object-contain lg:w-16 py-3 h-16 " />
+              <h2 className="text-2xl text-[#008037] font-medium">Trees Store</h2>
+            </Link>
+          </div>
+        </div>
+        <div className="flex justify-between items-center w-full">
+          <div className="navbar-center hidden lg:flex">
+            <ul className="menu menu-horizontal px-1">
+              {NavLinks}
+            </ul>
+          </div>
+          <div className="flex justify-end items-center gap-2">
+            <div className="dropdown dropdown-end">
+              <div
+                tabIndex={0}
+                role="button"
+                className="btn btn-ghost btn-circle"
+              >
+                <div className="indicator">
+                  {<FaRegHeart size={25} />}
+
+                  <span className="badge badge-sm indicator-item bg-[#008037] text-white w-5 h-5 text-md">8</span>
+                </div>
+              </div>
+              <div
+                tabIndex={0}
+                className="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow"
+              >
+                <div className="card-body">
+                  <span className="font-bold text-center w-full text-xl">8 Items</span>
+                  <div className="card-actions">
+                    <button className="btn bg-[#008037] text-white btn-block">
+                      View Wishlist
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="dropdown dropdown-end">
+              <div
+                tabIndex={0}
+                role="button"
+                className="btn btn-ghost btn-circle"
+              >
+                <div className="indicator">
+                  {<MdOutlineShoppingCart size={30} />}
+                  <span className="badge badge-sm indicator-item bg-[#008037] text-white w-5 h-5 text-md">8</span>
+                </div>
+              </div>
+              <div
+                tabIndex={0}
+                className="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow"
+              >
+                <div className="card-body">
+                  <span className="font-bold text-lg">8 Items</span>
+                  <span className="text-[#008037]">Subtotal: $999</span>
+                  <div className="card-actions">
+                    <button className="btn bg-[#008037] text-white btn-block">
+                      View cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="dropdown dropdown-end">
+              <div
+                tabIndex={0}
+                role="button"
+                className="btn btn-ghost btn-circle avatar"
+              >
+                <div className="w-10 rounded-full">
+                  <img
+                    alt="Tailwind CSS Navbar component"
+                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                  />
+                </div>
+              </div>
+              <ul
+                tabIndex={0}
+                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li>
+                  <a className="justify-between">
+                    Profile
+                    <span className="badge">New</span>
+                  </a>
+                </li>
+                <li>
+                  <a>Settings</a>
+                </li>
+                <li>
+                  <a>Logout</a>
+                </li>
+              </ul>
+            </div>
+            <div className="bg-[#008037] hover:bg-[#237848] hover:shadow-md px-6 py-2 flex justify-center items-center rounded-full text-lg font-bold text-white">
+              <Link to="login" className="text-center">Login</Link>
+            </div>
           </div>
         </div>
       </div>
