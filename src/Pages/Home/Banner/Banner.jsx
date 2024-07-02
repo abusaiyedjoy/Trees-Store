@@ -7,7 +7,7 @@ import './Banner.css'
 const Banner = () => {
     return (
         <div>
-            <header className="bg-[#DAE4E6] relative w-full h-[80vh] mb-12">
+            <header className="bg-[#b3d9b7] relative w-full h-[80vh]">
 
                 <div className="container px-6 pt-16 mx-auto h-full">
                     <div className=" w-full">
@@ -20,6 +20,7 @@ const Banner = () => {
                                     <p className="mt-16 text-xl max-w-lg text-primary">We have a wide variety of beautiful and good plant collections to beautify your home. </p>
 
                                     <button className="w-full px-5 py-2 mt-6 text-sm tracking-wider text-white uppercase transition-colors duration-300 transform bg-primary rounded-lg lg:w-auto hover:bg-[#226d39] focus:outline-none focus:bg-[#2d6b48]">Learn more...</button>
+                                    
                                 </div>
                             </div>
 
