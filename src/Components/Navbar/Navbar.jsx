@@ -22,7 +22,7 @@ const Navbar = () => {
     </>
 
   return (
-    <div className=" shadow-xl fixed w-full bg-gray-100">
+    <div className=" shadow-xl fixed top-0 w-full h-[80px] z-20 bg-gray-100">
       <div className="navbar">
         <div className="navbar-start">
           <div className="dropdown">
@@ -143,7 +143,7 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
-            <div className="bg-[#008037] hover:bg-[#237848] hover:shadow-md px-6 py-2 flex justify-center items-center rounded-full text-lg font-bold text-white">
+            <div className="bg-[#008037] hover:bg-[#2d8453] hover:shadow-md px-6 py-2 flex justify-center items-center rounded-full text-lg font-bold text-white">
               <Link to="login" className="text-center">Login</Link>
             </div>
           </div>

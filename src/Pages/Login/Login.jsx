@@ -1,5 +1,4 @@
 import { useState } from "react";
-import avater from "./../../assets/undraw_male_avatar_g98d (1).svg";
 import { IoIosEye } from "react-icons/io";
 import { IoIosEyeOff } from "react-icons/io";
 import { useForm } from "react-hook-form";
@@ -13,10 +12,7 @@ const Login = () => {
       console.log(email, password)
   }
   return (
-    <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-50 text-gray-800">
-      <div className="flex justify-center items-center">
-        <img src={avater} alt="" className="w-20 md:w-24" />
-      </div>
+    <div className="w-full max-w-lg p-8 my-12 border-2 shadow-md space-y-3 rounded-xl bg-gray-50 text-gray-800">
       <h1 className="text-2xl md:text-3xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-green-700 to-green-400">
         Sign In
       </h1>

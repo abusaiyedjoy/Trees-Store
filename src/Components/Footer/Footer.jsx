@@ -4,7 +4,7 @@ import Logo from "./../../assets/OliveTree dental logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-100">
+    <footer className="bg-gray-100 shadow-xl border-t-2">
       <div className="container p-6 mx-auto">
         <div className="lg:flex">
           <div className="w-full -mx-6 lg:w-2/5">
