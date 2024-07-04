@@ -9,10 +9,11 @@ const Navbar = () => {
       <li><NavLink exact to="/" className="nav-link">Home</NavLink></li>
       <li>
         <details>
-          <summary className="nav-links">Parent</summary>
+          <summary className="nav-links">Our Shop</summary>
           <ul className="p-2">
-            <li><NavLink to="/submenu1" className="nav-link">Submenu 1</NavLink></li>
-            <li><NavLink to="/submenu2" className="nav-link">Submenu 2</NavLink></li>
+            <li><NavLink to="/flower" className="nav-link">Flower Trees</NavLink></li>
+            <li><NavLink to="/fruit" className="nav-link">Fruit Trees</NavLink></li>
+            <li><NavLink to="/vegitable" className="nav-link">Vegitable Trees</NavLink></li>
           </ul>
         </details>
       </li>
@@ -69,7 +70,7 @@ const Navbar = () => {
                 <div className="indicator">
                   {<FaRegHeart size={25} />}
 
-                  <span className="badge badge-sm indicator-item bg-[#008037] text-white w-5 h-5 text-md">8</span>
+                  <span className="badge badge-sm indicator-item bg-[#008037] text-white w-5 h-5 text-md">6</span>
                 </div>
               </div>
               <div
@@ -79,9 +80,9 @@ const Navbar = () => {
                 <div className="card-body">
                   <span className="font-bold text-center w-full text-xl">8 Items</span>
                   <div className="card-actions">
-                    <button className="btn bg-[#008037] text-white btn-block">
+                    <Link to="/viewWishlist" className="btn bg-[#008037] text-white btn-block">
                       View Wishlist
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -105,9 +106,9 @@ const Navbar = () => {
                   <span className="font-bold text-lg">8 Items</span>
                   <span className="text-[#008037]">Subtotal: $999</span>
                   <div className="card-actions">
-                    <button className="btn bg-[#008037] text-white btn-block">
+                    <Link to="/viewCart" className="btn bg-[#008037] text-white btn-block">
                       View cart
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>

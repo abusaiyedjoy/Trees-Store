@@ -9,6 +9,8 @@ import ForgotPassword from './../Pages/Login/ForgotPassword';
 import AboutUS from "../Pages/AboutUS/AboutUS";
 import ContactUS from "../Pages/ContactUS/ContactUS";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import ViewCart from "../Pages/ViewCart/ViewCart";
+import ViewWishlist from "../Pages/ViewWishlist/ViewWishlist";
 
   const router = createBrowserRouter([
     {
@@ -39,6 +41,14 @@ import ErrorPage from "../Pages/ErrorPage/ErrorPage";
         {
           path: "contact",
           element: <ContactUS />,
+        },
+        {
+          path: "viewCart",
+          element: <ViewCart/>,
+        },
+        {
+          path: "viewWishlist",
+          element: <ViewWishlist />,
         },
       ],
     },
