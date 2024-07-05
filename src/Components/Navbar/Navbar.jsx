@@ -11,6 +11,7 @@ const Navbar = () => {
         <details>
           <summary className="nav-links">Our Shop</summary>
           <ul className="p-2">
+            <li><NavLink to="/all" className="nav-link">All</NavLink></li>
             <li><NavLink to="/flower" className="nav-link">Flower Trees</NavLink></li>
             <li><NavLink to="/fruit" className="nav-link">Fruit Trees</NavLink></li>
             <li><NavLink to="/vegitable" className="nav-link">Vegitable Trees</NavLink></li>
