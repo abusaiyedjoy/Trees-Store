@@ -10,7 +10,7 @@ const Navbar = () => {
       <li>
         <details>
           <summary className="nav-links">Our Shop</summary>
-          <ul className="p-2">
+          <ul className="p-2 w-40">
             <li><NavLink to="/all" className="nav-link">All</NavLink></li>
             <li><NavLink to="/flower" className="nav-link">Flower Trees</NavLink></li>
             <li><NavLink to="/fruit" className="nav-link">Fruit Trees</NavLink></li>
@@ -21,6 +21,7 @@ const Navbar = () => {
       <li><NavLink to="/blog" className="nav-link">Blog</NavLink></li>
       <li><NavLink to="/about" className="nav-link">About US</NavLink></li>
       <li><NavLink to="/contact" className="nav-link">Contact US</NavLink></li>
+      <li><NavLink to="/dashboard" className="nav-link">Dashboard</NavLink></li>
     </>
 
   return (

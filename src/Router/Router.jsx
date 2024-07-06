@@ -11,6 +11,7 @@ import ContactUS from "../Pages/ContactUS/ContactUS";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import ViewCart from "../Pages/ViewCart/ViewCart";
 import ViewWishlist from "../Pages/ViewWishlist/ViewWishlist";
+import Dashboard from "../Pages/Dashboard/Dashboard";
 
   const router = createBrowserRouter([
     {
@@ -41,6 +42,10 @@ import ViewWishlist from "../Pages/ViewWishlist/ViewWishlist";
         {
           path: "contact",
           element: <ContactUS />,
+        },
+        {
+          path: "dashboard",
+          element: <Dashboard />,
         },
         {
           path: "viewCart",
