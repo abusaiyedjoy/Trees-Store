@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet";
-import Title from "../../Components/Title/Title";
 import Banner from "./Banner/Banner";
+import Category from "./Category/Category";
 
 const Home = () => {
     return (
@@ -9,8 +9,8 @@ const Home = () => {
                 <title>Trees Store || Home</title>
             </Helmet>
             <Banner></Banner>
+            <Category></Category>
 
-            <Title title={" All Category!!"}></Title>
         </div>
     );
 };
