@@ -12,6 +12,7 @@ import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import ViewCart from "../Pages/ViewCart/ViewCart";
 import ViewWishlist from "../Pages/ViewWishlist/ViewWishlist";
 import Dashboard from "../Pages/Dashboard/Dashboard";
+import Blog from './../Pages/Blog/Blog';
 
   const router = createBrowserRouter([
     {
@@ -34,6 +35,10 @@ import Dashboard from "../Pages/Dashboard/Dashboard";
         {
           path: "signup",
           element: <SignUp />,
+        },
+        {
+          path: "blog",
+          element: <Blog/>,
         },
         {
           path: "about",
