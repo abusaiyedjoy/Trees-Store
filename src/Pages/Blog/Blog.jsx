@@ -8,6 +8,7 @@ import image2 from './../../assets/Big_tree1-removebg-preview.png'
 
 const Blog = () => {
     return (
+        
         <>
             <Helmet>
                 <title>Trees Store || About Us</title>

@@ -13,6 +13,10 @@ import ViewCart from "../Pages/ViewCart/ViewCart";
 import ViewWishlist from "../Pages/ViewWishlist/ViewWishlist";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import Blog from './../Pages/Blog/Blog';
+import AllProduct from "../Pages/Our Shop/All Product/AllProducts";
+import Flower from "../Pages/Our Shop/All Product/Flower/Flower";
+import Fruit from "../Pages/Our Shop/Fruit/Fruit";
+import Vegitable from "../Pages/Our Shop/Vegitable/Vegitable";
 
   const router = createBrowserRouter([
     {
@@ -59,6 +63,24 @@ import Blog from './../Pages/Blog/Blog';
         {
           path: "viewWishlist",
           element: <ViewWishlist />,
+        },
+
+        // Our Shop Section
+        {
+          path: "all",
+          element: <AllProduct />,
+        },
+        {
+          path: "flower",
+          element: <Flower />,
+        },
+        {
+          path: "fruit",
+          element: <Fruit />,
+        },
+        {
+          path: "vegitable",
+          element: <Vegitable />,
         },
       ],
     },
