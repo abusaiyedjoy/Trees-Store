@@ -2,9 +2,9 @@
 const Sidebar = () => {
     return (
         <aside className="flex flex-col items-center w-16 h-screen py-8 overflow-y-auto bg-emerald-100/60 border-r rtl:border-l rtl:border-r-0">
-            <nav className="flex flex-col flex-1 space-y-6">
+            <nav className="flex justify-start items-center flex-col flex-1 space-y-6">
                 <a href="#">
-                    <img className="w-auto h-6 " src="https://merakiui.com/images/logo.svg" alt=""/>
+                    <img className="w-auto h-6 " src="https://raw.githubusercontent.com/abusaiyedjoy/Trees-Store/main/src/assets/OliveTree%20dental%20logo%20(2).png" alt=""/>
                 </a>
 
                 <a href="#" className="p-1.5 text-gray-800 hover:text-white font-semibold focus:outline-nones transition-colors duration-200 rounded-lg hover:bg-primary">
