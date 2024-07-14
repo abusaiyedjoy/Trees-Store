@@ -42,7 +42,7 @@ const SignUp = () => {
           <h1 className="text-primary">Sign Up</h1>
         </div>
       </section>
-      <div className="w-full max-w-lg mx-auto p-8 my-12 border-2 shadow-md space-y-3 rounded-xl bg-gray-50 text-gray-800">
+      <div className=" w-full max-w-lg mx-auto p-8 my-12 border-2 shadow-md space-y-3 rounded-xl bg-gray-50 text-gray-800">
         <div className="flex flex-col justify-center items-center relative">
           <div className="">
             {profileImage ? (<img src={profileImage} alt="" className="w-20 md:w-24 h-20 md:h-24 rounded-full bg-center" />) : (<img src={avater} alt="" className="w-20 md:w-24" />)}
