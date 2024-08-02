@@ -9,7 +9,7 @@ const Banner = () => {
         <div>
             <header className="bg-[#b3d9b7] relative w-full h-[80vh]">
 
-                <div className="container px-6 pt-16 mx-auto h-full">
+                <div className="container px-6 mx-auto h-full">
                     <div className=" w-full">
                         <div className="items-end lg:flex ">
                             <div className="w-full">

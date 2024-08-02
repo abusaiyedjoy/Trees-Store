@@ -25,7 +25,7 @@ const Navbar = () => {
     </>
 
   return (
-    <div className=" shadow-xl fixed top-0 w-full h-[80px] z-20 bg-gray-100">
+    <div className="fixed top-0 w-full h-[80px] z-20 bg-[#b3d9b7]">
       <div className="navbar">
         <div className="navbar-start">
           <div className="dropdown">
@@ -63,7 +63,7 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="flex justify-end items-center gap-2">
-            <div className="dropdown dropdown-end">
+            <div className="hidden md:block dropdown dropdown-end">
               <div
                 tabIndex={0}
                 role="button"
@@ -89,7 +89,7 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-            <div className="dropdown dropdown-end">
+            <div className="hidden md:block dropdown dropdown-end">
               <div
                 tabIndex={0}
                 role="button"
@@ -137,6 +137,12 @@ const Navbar = () => {
                     Profile
                     <span className="badge">New</span>
                   </a>
+                </li>
+                <li>
+                  <a className="block md:hidden" href="/viewCart">View Cart</a>
+                </li>
+                <li>
+                  <a className="block md:hidden" href="/viewWishlist">View Wishlist</a>
                 </li>
                 <li>
                   <a>Settings</a>
