@@ -51,7 +51,7 @@ const Navbar = () => {
           </div>
           <div className="w-[400px]">
             <Link to="/" className="flex justify-start items-center gap-0 w-full">
-              <img src={Logo} alt="" className="w-32 object-contain lg:w-16 py-3 h-16 " />
+              <img src={Logo} alt="" className="w-12 object-contain lg:w-16 py-3 h-16 " />
               <h2 className="text-2xl text-[#008037] font-medium">Trees Store</h2>
             </Link>
           </div>

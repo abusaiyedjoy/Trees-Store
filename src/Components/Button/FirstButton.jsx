@@ -3,7 +3,7 @@ import { GiSelfLove } from "react-icons/gi";
 
 const FirstButton = ({name}) => {
     return (
-        <div className="w-48 h-40 flex items-center justify-center cursor-pointer">
+        <div className="w-48 flex items-center justify-center cursor-pointer">
             <div
                 className="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold shadow text-gray-200 transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-primary hover:text-primary group"
             >

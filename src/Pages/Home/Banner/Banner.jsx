@@ -3,16 +3,19 @@ import image1 from "./../../../assets/Plant-2-removebg-preview.png"
 import image2 from "./../../../assets/Plant-1-removebg-preview.png"
 import image3 from "./../../../assets/Plant-4-removebg-preview.png"
 import './Banner.css'
+import Navbar from './../../../Components/Navbar/Navbar';
 
 const Banner = () => {
     return (
-        <div>
-            <header className="bg-[#b3d9b7] relative w-full h-[80vh]">
+        <div className="bg-[#b3d9b7]">
+            <div className="h-[80px]">
+                <Navbar></Navbar>
+            </div>
+            <header className="bg-[#b3d9b7] relative w-full h-full lg:h-[80vh]">
 
                 <div className="container px-6 mx-auto h-full">
-                    <div className=" w-full">
-                        <div className="items-end lg:flex ">
-                            <div className="w-full">
+                    <div className=" w-full py-6 pb-56">
+                        <div className="items-end w-full flex flex-col-reverse lg:flex-row ">
                                 <div className="w-full">
                                     <h1 className="text-4xl font-semibold text-primary lg:text-6xl">Trees Plant.  </h1>
 
@@ -20,13 +23,12 @@ const Banner = () => {
                                     <p className="mt-16 text-xl max-w-lg text-primary">We have a wide variety of beautiful and good plant collections to beautify your home. </p>
 
                                     <button className="w-full px-5 py-2 mt-6 text-sm tracking-wider text-white uppercase transition-colors duration-300 transform bg-primary rounded-lg lg:w-auto hover:bg-[#226d39] focus:outline-none focus:bg-[#2d6b48]">Learn more...</button>
-                                    
+
                                 </div>
-                            </div>
 
                             <div className="flex items-end justify-center w-full mt-6 pb-3 lg:mt-0 lg:w-1/2 gap-0">
-                                <img className="w-1/3 h-full lg:max-w-3xl" src={image3} alt="Catalogue-pana.svg" />
-                                <img className="w-1/2 h-full lg:max-w-3xl" src={image1} alt="Catalogue-pana.svg" />
+                                <img className="hidden lg:block w-1/3 h-full lg:max-w-3xl" src={image3} alt="Catalogue-pana.svg" />
+                                <img className="hidden lg:block w-1/2 h-full lg:max-w-3xl" src={image1} alt="Catalogue-pana.svg" />
                                 <img className="w-full h-full lg:max-w-3xl" src={image2} alt="Catalogue-pana.svg" />
                             </div>
                         </div>

@@ -6,46 +6,46 @@ const TopSelling = () => {
     return (
         <>
         <Title title={"Our Top Selling Products"}></Title>
-            <section className=" mt-44 mb-12 container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                <div className="card border relative border-primary bg-secondary w-96">
+            <section className=" mt-44 mb-12 container mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-44">
+                <div className="card border relative border-primary bg-secondary w-72">
                     <img className="absolute -top-7 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-56" src="https://i.ibb.co/NY4gJqg/Plant-2-removebg-preview.png" alt="" />
                     <div className="card-body items-center text-center pt-32">
                         <h2 className="card-title">Mango TbTruckDelivery</h2>
                         <p>$20.00</p>
-                        <div className="justify-end flex items-end  ">
+                        <div className="justify-end flex flex-col items-end  ">
                             <SecondButton name={"Add to Cart"}></SecondButton>
                             <FirstButton name={"Add to Wishlist"}></FirstButton>
                         </div>
                     </div>
                 </div>
-                <div className="card border relative border-primary bg-secondary w-96">
+                <div className="card border relative border-primary bg-secondary w-72">
                     <img className="absolute -top-7 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-56" src="https://i.ibb.co/NY4gJqg/Plant-2-removebg-preview.png" alt="" />
                     <div className="card-body items-center text-center pt-32">
                         <h2 className="card-title">Mango TbTruckDelivery</h2>
                         <p>$20.00</p>
-                        <div className="justify-end flex items-end  ">
+                        <div className="justify-end flex flex-col items-end  ">
                             <SecondButton name={"Add to Cart"}></SecondButton>
                             <FirstButton name={"Add to Wishlist"}></FirstButton>
                         </div>
                     </div>
                 </div>
-                <div className="card border relative border-primary bg-secondary w-96">
+                <div className="card border relative border-primary bg-secondary w-72">
                     <img className="absolute -top-7 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-56" src="https://i.ibb.co/NY4gJqg/Plant-2-removebg-preview.png" alt="" />
                     <div className="card-body items-center text-center pt-32">
                         <h2 className="card-title">Mango TbTruckDelivery</h2>
                         <p>$20.00</p>
-                        <div className="justify-end flex items-end  ">
+                        <div className="justify-end flex flex-col items-end  ">
                             <SecondButton name={"Add to Cart"}></SecondButton>
                             <FirstButton name={"Add to Wishlist"}></FirstButton>
                         </div>
                     </div>
                 </div>
-                <div className="card border relative border-primary bg-secondary w-96">
+                <div className="card border relative border-primary bg-secondary w-72">
                     <img className="absolute -top-7 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-56" src="https://i.ibb.co/NY4gJqg/Plant-2-removebg-preview.png" alt="" />
                     <div className="card-body items-center text-center pt-32">
                         <h2 className="card-title">Mango TbTruckDelivery</h2>
                         <p>$20.00</p>
-                        <div className="justify-end flex items-end  ">
+                        <div className="justify-end flex flex-col items-end  ">
                             <SecondButton name={"Add to Cart"}></SecondButton>
                             <FirstButton name={"Add to Wishlist"}></FirstButton>
                         </div>
