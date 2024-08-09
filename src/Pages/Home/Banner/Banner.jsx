@@ -3,14 +3,10 @@ import image1 from "./../../../assets/Plant-2-removebg-preview.png"
 import image2 from "./../../../assets/Plant-1-removebg-preview.png"
 import image3 from "./../../../assets/Plant-4-removebg-preview.png"
 import './Banner.css'
-import Navbar from './../../../Components/Navbar/Navbar';
 
 const Banner = () => {
     return (
         <div className="bg-[#b3d9b7]">
-            <div className="h-[80px]">
-                <Navbar></Navbar>
-            </div>
             <header className="bg-[#b3d9b7] relative w-full h-full lg:h-[80vh]">
 
                 <div className="container px-6 mx-auto h-full">
