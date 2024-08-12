@@ -4,6 +4,7 @@ import image2 from "./../../../assets/Plant-1-removebg-preview.png"
 import image3 from "./../../../assets/Plant-4-removebg-preview.png"
 import './Banner.css'
 
+
 const Banner = () => {
     return (
         <div className="bg-[#b3d9b7]">

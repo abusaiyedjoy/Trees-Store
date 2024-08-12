@@ -1,4 +1,6 @@
+
 /* eslint-disable react/prop-types */
+
 import { GiSelfLove } from "react-icons/gi";
 
 const FirstButton = ({name}) => {

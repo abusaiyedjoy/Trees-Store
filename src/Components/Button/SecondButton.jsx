@@ -15,13 +15,11 @@ const SecondButton = ({name}) => {
                     className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12"
                 >
                     <MdShoppingCartCheckout />
-
                 </span>
                 <span
                     className="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200"
                 >
                     <FaCartArrowDown />
-
                 </span>
                 <span
                     className="relative w-full text-left transition-colors duration-200 ease-in-out "
