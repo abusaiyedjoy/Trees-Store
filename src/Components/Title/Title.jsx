@@ -4,7 +4,7 @@ import { Typewriter } from 'react-simple-typewriter';
 const Title = ({title}) => {
   return (
     <div className="flex items-center justify-center bg-transparent my-2">
-      <h1 className="relative overflow-hidden whitespace-nowrap font-semibold p-2 text-5xl text-[#008037]">
+      <h1 className="relative overflow-hidden whitespace-nowrap font-semibold p-2 text-3xl md:text-5xl text-[#008037]">
         <Typewriter
           words={[`${title}`]}
           loop={false}
