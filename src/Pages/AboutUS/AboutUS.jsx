@@ -155,23 +155,23 @@ const AboutUS = () => {
                 <section className="bg-[#b3d9b7] my-12  px-6 py-8 rounded-2xl container mx-auto w-full">
                     <div className="collapse collapse-arrow bg-transparent border border-primary mb-2">
                         <input type="radio" name="my-accordion-2" defaultChecked />
-                        <div className="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                        <div className="collapse-title text-xl font-medium">How do I choose the right tree for my space?</div>
                         <div className="collapse-content">
-                            <p>hello</p>
+                            <p>Answer: Choosing the right tree depends on factors like the size of your space, soil type, climate, and the tree's growth rate. We provide detailed information on each tree's page, including height, spread, and ideal growing conditions, to help you make an informed decision. You can also contact our experts for personalized recommendations.</p>
                         </div>
                     </div>
                     <div className="collapse collapse-arrow bg-transparent border border-primary mb-2">
                         <input type="radio" name="my-accordion-2" />
-                        <div className="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                        <div className="collapse-title text-xl font-medium">What is the best time of year to plant trees?</div>
                         <div className="collapse-content">
-                            <p>hello</p>
+                            <p>Answer: The best time to plant trees generally depends on your location and the type of tree. For most regions, fall and spring are ideal because of the moderate temperatures and ample rainfall. However, some trees may prefer different planting times, which we mention in the product details. Check our seasonal planting guide for specific advice.</p>
                         </div>
                     </div>
                     <div className="collapse collapse-arrow bg-transparent border border-primary mb-2">
                         <input type="radio" name="my-accordion-2" />
-                        <div className="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                        <div className="collapse-title text-xl font-medium">Do you offer delivery and planting services?</div>
                         <div className="collapse-content">
-                            <p>hello</p>
+                            <p>Answer: Yes, we offer delivery and planting services for an additional fee. Our team ensures that your tree is delivered safely and planted properly in your desired location. You can select these options at checkout or contact us for a customized quote based on your location and the type of tree.</p>
                         </div>
                     </div>
                 </section>
