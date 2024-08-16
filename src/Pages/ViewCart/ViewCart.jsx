@@ -17,7 +17,7 @@ const ViewCart = () => {
                                             </div>
                                         </th>
 
-                                        <th scope="col" className="px-12 py-3.5 text-lg font-medium text-left rtl:text-right text-emerald-500">
+                                        <th scope="col" className="hidden md:block px-12 py-3.5 text-lg font-medium text-left rtl:text-right text-emerald-500">
                                             <button className="flex items-center gap-x-2">
                                                 <span>Name</span>
                                             </button>
@@ -38,9 +38,9 @@ const ViewCart = () => {
                                         <td className="px-4 py-4 text-sm font-medium text-gray-700">
                                             <img className="flex-shrink-0 object-cover w-20 h-20 rounded-lg outline-none sm:w-32 sm:h-32 dark:bg-gray-500" src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-1.2.1&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Polaroid camera" />
                                         </td>
-                                        <td className="px-5 py-4 text-sm font-medium text-gray-700">
+                                        <td className="hidden md:flex h-[160px] justify-center items-center px-5 py-4 text-sm font-medium text-gray-700">
 
-                                            <h2 className="text-xl font-medium text-emerald-500">Abu Saiyed</h2>
+                                            <h2 className="text-xl h-full text-center flex justify-center items-center font-medium text-emerald-500">Abu Saiyed</h2>
                                         </td>
                                         <td className="px-4 py-4 text-xl font-medium text-gray-500  ">Digital Camera</td>
                                         <td className="px-4 py-4 text-sm text-gray-500  ">
