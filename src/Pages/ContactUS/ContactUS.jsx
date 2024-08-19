@@ -9,6 +9,7 @@ import { FiPhoneCall } from "react-icons/fi";
 import Title from "../../Components/Title/Title";
 import { AiOutlineHome } from "react-icons/ai";
 import { Helmet } from "react-helmet";
+import SimpleMap from './GoogleMap';
 
 const ContactUS = () => {
     return (
@@ -38,6 +39,9 @@ const ContactUS = () => {
 
                         </div>
                     </div>
+                </section>
+                <section className="bg-[#b3d9b7] my-12 rounded-2xl container mx-auto w-full p-10">
+                    <SimpleMap text={'Trees Store'}></SimpleMap>
                 </section>
                 <section className="bg-transparent container mx-auto">
                     <div className="container my-12 mx-auto">
