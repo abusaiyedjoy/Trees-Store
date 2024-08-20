@@ -7,6 +7,8 @@ import { Link } from "react-router-dom";
 import ProfilePic from "./ProfilePic";
 import { Helmet } from "react-helmet";
 import { AiOutlineHome } from "react-icons/ai";
+import { useContext } from "react";
+import { AuthContext } from "../../Authentication/AuthProvider";
 
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -17,9 +19,19 @@ const SignUp = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+
+  const {createUser}=useContext(AuthContext)
+
   const onSubmit = (data) => {
-    const { email, password, confirm_password } = data;
-    console.log(email, password, confirm_password);
+    const {name, email, password, confirm_password } = data;
+    console.log(name, email, password, confirm_password);
+
+    createUser(email, password)
+  .then(result=>{
+    const user = result.user;
+    console.log(user);
+  })
+  .then(error=> console.log(error))
   };
 
   const handleFileSubmit = async (e) => {
@@ -28,6 +40,7 @@ const SignUp = () => {
     const ProfileImage = await ProfilePic(file)
     setProfileImage(ProfileImage);
   };
+  console.log(profileImage);
 
   return (
     <section className="flex flex-col w-full">
@@ -64,6 +77,21 @@ const SignUp = () => {
         </p>
 
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+          <div className="space-y-1 text-sm">
+            <label className="block text-base text-gray-600">Your Name</label>
+            <input
+              type="name"
+              name="name"
+              id="name"
+              placeholder="Your name"
+              className="w-full px-4 py-3 rounded-md border outline-none border-green-500 text-gray-800 "
+              {...register("name", { required: true })}
+              required
+            />
+            {errors.name && (
+              <span className="text-red-500 mt-1">This fill is required </span>
+            )}
+          </div>
           <div className="space-y-1 text-sm">
             <label className="block text-base text-gray-600">Your Email</label>
             <input
