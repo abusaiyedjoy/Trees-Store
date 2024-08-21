@@ -5,13 +5,24 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { AiOutlineHome } from "react-icons/ai";
+import { useContext } from "react";
+import { AuthContext } from "../../Authentication/AuthProvider";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const { register, handleSubmit, formState: { errors } } = useForm();
+  const { signIn } = useContext(AuthContext)
+
   const onSubmit = (data) => {
     const { email, password } = data;
     console.log(email, password)
+
+    signIn(email, password)
+      .then(result => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch(error => console.log(error))
   }
   return (
     <section className="flex flex-col w-full">
@@ -20,7 +31,7 @@ const Login = () => {
       </Helmet>
       <section className="bg-[#b3d9b7] mb-12 py-3 px-6 w-full">
         <div className="flex text-xl justify-start gap-1 items-center">
-        <AiOutlineHome />
+          <AiOutlineHome />
           <Link to="/" className="hover:text-primary">Home</Link>
           <IoIosArrowForward />
           <h1 className="text-primary">Sign In</h1>

@@ -20,18 +20,18 @@ const SignUp = () => {
     formState: { errors },
   } = useForm();
 
-  const {createUser}=useContext(AuthContext)
+  const { createUser } = useContext(AuthContext)
 
   const onSubmit = (data) => {
-    const {name, email, password, confirm_password } = data;
+    const { name, email, password, confirm_password } = data;
     console.log(name, email, password, confirm_password);
 
     createUser(email, password)
-  .then(result=>{
-    const user = result.user;
-    console.log(user);
-  })
-  .then(error=> console.log(error))
+      .then(result => {
+        const user = result.user;
+        console.log('user', user);
+      })
+      .catch(error => console.log(error))
   };
 
   const handleFileSubmit = async (e) => {
@@ -49,7 +49,7 @@ const SignUp = () => {
       </Helmet>
       <section className="bg-[#b3d9b7] mb-12 py-3 px-6 w-full">
         <div className="flex text-xl justify-start gap-1 items-center">
-        <AiOutlineHome />
+          <AiOutlineHome />
           <Link to="/" className="hover:text-primary">Home</Link>
           <IoIosArrowForward />
           <h1 className="text-primary">Sign Up</h1>

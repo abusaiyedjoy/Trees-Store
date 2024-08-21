@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import { createContext } from "react";
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
 import { app } from "../../fairbase.config";
 import { useEffect } from "react";
 
@@ -32,10 +33,21 @@ const AuthProvider = ({ children }) => {
         };
     }, [])
 
+    const signIn = (email, password)=>{
+        setLoading(true)
+        return signInWithEmailAndPassword(auth, email, password)
+    }
+
+    const signOut = ()=>{
+        return signIn(auth);
+    }
+
     const useInfo = {
         user,
         loading,
         createUser,
+        signIn,
+        signOut,
     }
     return (
         <AuthContext.Provider value={useInfo}>
